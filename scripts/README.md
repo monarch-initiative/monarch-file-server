@@ -11,7 +11,7 @@ gcloud auth application-default login
 
 ```bash
 mkdir /tmp/mnt/ || true
-gcsfuse --implicit-dirs data-test.monarchinitiative.org /tmp/mnt
+gcsfuse --implicit-dirs data-public-monarchinitiative /tmp/mnt
 ```
 
 #### If necessary, update the latest directory
@@ -25,7 +25,7 @@ gsutil cp -r gs://data-test.monarchinitiative.org/monarch/$LATEST/* gs://data-te
 ```bash
 python3.8 -m venv venv
 source venv/bin/activate
-python3 ./scripts/directory_indexer.py -v --inject ./scripts/directory-index-template.html --directory /tmp/mnt --prefix https://data-test.monarchinitiative.org -x
+python3 ./scripts/directory_indexer.py -v --inject ./scripts/directory-index-template.html --directory /tmp/mnt --prefix https://data.monarchinitiative.org -x
 ```
 
 #### Unmount
