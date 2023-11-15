@@ -9,6 +9,9 @@ pipeline {
         stage('index') {
             steps {
                 sh '''
+                    echo "Current directory: $(pwd)"
+                    echo "Current dir contents: $(ls -l)"
+                    
                     cd $HOME
                     mkdir data-public
                     gcsfuse --implicit-dirs data-public-monarchinitiative data-public
