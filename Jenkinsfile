@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'monarch-agent-medium' }
+    agent { label 'monarch-agent-small' }
         environment {
         HOME = "${env.WORKSPACE}"
         RELEASE = sh(script: "echo `date +%Y-%m-%d`", returnStdout: true).trim()
